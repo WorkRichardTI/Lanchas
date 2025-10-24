@@ -178,7 +178,7 @@ function LanchasSection() {
     { name: "Cap. Ramos", title: "Lancha Netuno 26'", rating: 4.5, price: "1.980,00", capacity: 6 },
     { name: "Cap. Torres", title: "Lancha Aurora 40'", rating: 4.8, price: "4.250,00", capacity: 16 }
   ];
-  const filtered = filter ? boats.filter((b) => b.capacity >= filter) : boats;
+  const filtered = filter ? boats.filter((b) => b.capacity <= filter) : boats;
 
   return (
     <section id="lanchas" className="max-w-6xl mx-auto px-4 py-20">
@@ -333,7 +333,7 @@ function AuthModal({ tab, onChangeTab, onClose }: { tab: "login" | "signup"; onC
 function Footer() {
   return (
     <footer className="bg-white border-t mt-20">
-      <div className="max-w-6xl mx_auto px-4 py-10 grid md:grid-cols-3 gap-6 text-sm">
+      <div className="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-6 text-sm">
         <div>
           <p className="font-black text-[rgb(11,27,58)]">Lanchas</p>
           <p className="text-slate-600">Conectando portos e pessoas com segurança e transparência.</p>
